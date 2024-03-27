@@ -1,0 +1,22 @@
+spring:
+  boot:
+    admin:
+      client:
+        url: http://localhost:9000
+        instance:
+          prefer-ip: true #基于ip地址向服务器注册，默认域名注册
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+    enabled-by-default: true #开启所有监控端点
+  endpoint:
+    health:
+      show-details: always
+      enabled: true
+    info:
+      enabled: true
+    metrics:
+      enabled: true
